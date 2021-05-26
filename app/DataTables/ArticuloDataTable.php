@@ -9,7 +9,7 @@ use Yajra\DataTables\EloquentDataTable;
 class ArticuloDataTable extends DataTable
 {
     /**
-     * Build DataTable class.
+     * Build DataTable class.w
      *
      * @param mixed $query Results from query() method.
      * @return \Yajra\DataTables\DataTableAbstract
