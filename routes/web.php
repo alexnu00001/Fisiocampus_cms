@@ -135,3 +135,9 @@ Route::resource('estudianteOfertas', App\Http\Controllers\EstudianteOfertaContro
 Route::resource('tipoCalificacions', tipo_calificacionController::class);
 
 Route::resource('calificacionOfertaCursos', calificacion_oferta_cursoController::class);
+
+
+// =============================================================================
+// Route test
+// =============================================================================
+Route::view('/test', 'test', ['name' => 'test']);
