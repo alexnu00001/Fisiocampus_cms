@@ -33,3 +33,16 @@
         }
     })
 </script>
+
+{{-- Valdiate forms --}}
+<script src="{{asset('vuexy/app-assets/vendors/js/forms/select/select2.full.min.js')}}"></script>
+<script src="{{asset('vuexy/app-assets/vendors/js/forms/validation/jquery.validate.min.js')}}"></script>
+<script src="{{asset('vuexy/app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
+<script src="{{asset('vuexy/app-assets/js/scripts/forms/form-validation.js')}}"></script>
+
+{{-- DataTable --}}
+<script src="{{asset('vuexy/app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('vuexy/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('vuexy/app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('vuexy/app-assets/vendors/js/tables/datatable/responsive.bootstrap4.js')}}"></script>
+<script src="{{asset('vuexy/app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
