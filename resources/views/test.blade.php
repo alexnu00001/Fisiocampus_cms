@@ -18,9 +18,9 @@
                 <form class="auth-login-form mt-2" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="form-group">
-                        <label for="email" class="form-label">Correo electrónico</label>
+                        <label for="email" class="form-label @error('email') is-invalid @enderror">Correo electrónico</label>
                         <input type="text" class="form-control" id="email" name="email" placeholder="nombre@ejemlplo.com" aria-describedby="email" tabindex="1" autofocus value="{{ old('email') }}" autocomplete="email"/>
-                    </div>
+                    </div>                    
                     <div class="form-group">
                         <div class="d-flex justify-content-between">
                             <label for="login-password">Contraseña</label>                            

@@ -33,6 +33,14 @@
     <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/pages/page-auth.')}}css">
     <!-- END: Page CSS-->
 
+    {{-- Form validate --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('vuexy/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/vendors/css/forms/select/select2.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/plugins/forms/form-validation.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/plugins/forms/pickers/form-flat-pickr.css')}}">
+    
+
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('vuexy/assets/css/style.')}}css">
     <!-- END: Custom CSS-->
@@ -74,6 +82,12 @@
     <!-- BEGIN: Page JS-->
     <script src="{{asset('vuexy/app-assets/js/scripts/pages/page-auth-login.js')}}"></script>
     <!-- END: Page JS-->
+
+    {{-- Valdiate forms --}}
+    <script src="{{asset('vuexy/app-assets/vendors/js/forms/select/select2.full.min.js')}}"></script>
+    <script src="{{asset('vuexy/app-assets/vendors/js/forms/validation/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('vuexy/app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
+    <script src="{{asset('vuexy/app-assets/js/scripts/forms/form-validation.js')}}"></script>
 
     <script>
         $(window).on('load', function() {
