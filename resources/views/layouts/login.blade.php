@@ -40,6 +40,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/plugins/forms/form-validation.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/plugins/forms/pickers/form-flat-pickr.css')}}">
     
+    <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/plugins/forms/form-validation.css')}}">
+
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('vuexy/assets/css/style.')}}css">

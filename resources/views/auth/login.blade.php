@@ -1,105 +1,80 @@
-@extends('layouts/fullLayoutMaster')
-
-@section('title', 'Login Page')
-
-@section('page-style')
-{{-- Page Css files --}}
-<link rel="stylesheet" href="{{ asset(mix('css/pages/authentication.css')) }}">
-@endsection
-
+@extends('layouts.login')
 @section('content')
-<section class="row flexbox-container">
-  <div class="col-xl-12 col-12 d-flex justify-content-center">
-    <div class="card bg-authentication rounded-0 mb-0">
-      <div class="row m-0">
-        <div class="col-lg-6 d-lg-block d-none text-center align-self-center px-1 py-0">
-          <img src="{{ asset('images/pages/login.png') }}" alt="branding logo">
-        </div>
-        <div class="col-lg-6 col-12 p-0">
-          <div class="card rounded-0 mb-0 px-2">
-            <div class="card-header pb-1">
-              <div class="card-title">
-                <h4 class="mb-0">Inicio de sesión</h4>
-              </div>
-            </div>
-            <p class="px-2">Bienvenido al Administrador de Fisiocampus.</p>
-            <div class="card-content">
-              <div class="card-body pt-1">
-                <form method="POST" action="{{ route('login') }}">
-                  @csrf
-                  <fieldset class="form-label-group form-group position-relative has-icon-left">
+<div class="auth-wrapper auth-v1 px-2">
+    <div class="auth-inner py-2">
+        <!-- Login v1 -->
+        <div class="card mb-0">
+            <div class="card-body">
+                <a href="javascript:void(0);" class="brand-logo">
+                    {{-- <img src="{{asset('img/logos/logo_v2.png')}}" alt="Girl in a jacket" width="30" height="42"> --}}
+                    <h2 class="brand-text text-primary ml-1">Fisicampus</h2>
+                </a> 
 
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                           name="email" placeholder="E-Mail Address" value="{{ old('email') }}" required autocomplete="email"
-                           autofocus>
-
-                    <div class="form-control-position">
-                      <i class="feather icon-user"></i>
+                <h4 class="card-title mb-1 text-center">Bienvenido a Fisiocampus!</h4>
+                <div class="card-title mb-1 text-center">
+                    <img src="{{asset('img/icons/lock.png')}}" alt="Girl in a jacket" width="60" height="60">
+                </div>
+                {{-- <p class="card-text mb-2 text-center">CMS</p> --}}
+                <form id="form_login" class="auth-login-form mt-2" method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="nombre@ejemlplo.com" aria-describedby="email" tabindex="1" autofocus value="{{ old('email') }}" autocomplete="email" required/>
+                    </div>        
+                    @error('email')                                                                
+                        <h6 class="text-danger">{{ $message }}</h6>
+                    @enderror            
+                    <div class="form-group">                                                
+                            <label for="email" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" tabindex="2" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" autocomplete="current-password" required/>
                     </div>
-                    <label for="email">E-Mail Address</label>
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                  </fieldset>
-
-                  <fieldset class="form-label-group position-relative has-icon-left">
-
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                           name="password" placeholder="Password" required autocomplete="current-password">
-
-                    <div class="form-control-position">
-                      <i class="feather icon-lock"></i>
-                    </div>
-                    <label for="password">Password</label>
                     @error('password')
-                    <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                    </span>
+                      <h6 class="text-danger">{{ $message }}</h6>
                     @enderror
-                  </fieldset>
-                  <div class="form-group d-flex justify-content-between align-items-center">
-                    <div class="text-left">
-                      <fieldset class="checkbox">
-                        <div class="vs-checkbox-con vs-checkbox-primary">
-                          <input type="checkbox" {{ old('remember') ? 'checked' : '' }}>
-                          <span class="vs-checkbox">
-                            <span class="vs-checkbox--check">
-                              <i class="vs-icon feather icon-check"></i>
-                            </span>
-                          </span>
-                          <span class="">Remember me</span>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="remember-me" tabindex="3" {{ old('remember') ? 'checked' : '' }}/>
+                            <label class="custom-control-label" for="remember-me"> Recordar </label>
                         </div>
-                      </fieldset>
                     </div>
                     @if (Route::has('password.request'))
-                      <div class="text-right"><a class="card-link" href="{{ route('password.request') }}">
-                          Forgot Password?
-                        </a></div>
+                        <p class="text-center mt-2">                        
+                            <a href="{{ route('password.request') }}">
+                                <span>¿Olvido su contraseña?</span>
+                            </a>
+                        </p>
                     @endif
-
-                  </div>
-                  <a href="register" class="btn btn-outline-primary float-left btn-inline">Register</a>
-                  <button type="submit" class="btn btn-primary float-right btn-inline">Login</button>
+                    <button type="sumbit" class="btn btn-primary btn-block" tabindex="4">Acceder</button>
                 </form>
-              </div>
+                <p class="text-center mt-2">
+                    <span>¿Eres nuevo?</span>
+                    <a href="register">
+                        <span>Crea una cuenta</span>
+                    </a>
+                </p>
+                <div class="divider my-2">
+                    <div class="divider-text">O</div>
+                </div>
+                <div class="auth-footer-btn d-flex justify-content-center">
+                    <a href="javascript:void(0)" class="btn btn-facebook">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-twitter white">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-google">
+                        <i data-feather="mail"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-github">
+                        <i data-feather="github"></i>
+                    </a>
+                </div>
             </div>
-            <div class="login-footer">
-              <div class="divider">
-                <div class="divider-text">OR</div>
-              </div>
-              <div class="footer-btn d-inline">
-                <a href="#" class="btn btn-facebook"><span class="fa fa-facebook"></span></a>
-                <a href="#" class="btn btn-twitter white"><span class="fa fa-twitter"></span></a>
-                <a href="#" class="btn btn-google"><span class="fa fa-google"></span></a>
-                <a href="#" class="btn btn-github"><span class="fa fa-github-alt"></span></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <!-- /Login v1 -->
     </div>
-  </div>
-</section>
+</div>
+@endsection 
+@section('scripts')
+    @parent 
 @endsection
