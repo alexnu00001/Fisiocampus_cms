@@ -1,0 +1,267 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Tablero",
+      "slug": "Tablero",
+      "badge": "",
+      "badgeClass": "badge badge-warning badge-pill float-right mr-2",
+      "icon": "fa fa-home"
+
+    },
+    {
+      "url": "",
+      "navheader": "Administración",
+      "icon": ""
+    },
+    {
+      "url": "",
+      "name": "Ventas",
+      "icon": "fa fa-eur",
+      "i18n": "nav.app_todo"
+    },
+    {
+      "url": "",
+      "name": "Control de puestos",
+      "icon": "feather icon-user",
+      "submenu" : [
+        {
+          "url": "/users",
+          "name": "Usuarios",
+          "icon": "feather icon-user",
+          "i18n": "nav.app_calender"
+        },
+        {
+          "url": "/roles",
+          "name": "Roles",
+          "icon": "fa fa-user-plus",
+          "i18n": ""
+        },{
+          "url": "/permissions",
+          "name": "Permisos",
+          "icon": "fa fa-user-times",
+          "i18n": ""
+        }
+      ]
+    },
+    {
+      "url": "",
+      "navheader": "Contenido",
+      "icon": ""
+    },
+    {
+      "url": "",
+      "name": "Cont. Académico",
+      "icon": "fa fa-university",
+      "submenu": [
+        {
+          "url": "/ofertas",
+          "name": "Admon Ofertas",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_email"
+        },
+        {
+          "url": "/planEstudios",
+          "name": "Planes de estudio",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/cursos",
+          "name": "Cursos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/odas",
+          "name": "ODA's",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        }
+      ]
+    },
+    {
+      "url": "",
+      "name": "Catálogos",
+      "icon": "fa fa-linode",
+      "submenu": [
+        {
+          "url": "/logros",
+          "name": "Logros",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        },
+        {
+          "url": "/categorias",
+          "name": "Categorías",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        },
+        {
+          "url": "/pais",
+          "name": "Países",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        },
+        {
+          "url": "/sedes",
+          "name": "Sedes",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        },
+        {
+          "url": "/monedas",
+          "name": "Monedas",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_details"
+        },
+        {
+          "url": "/lenguajes",
+          "name": "Lenguajes",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_details"
+        },
+        {
+          "url": "/grados",
+          "name": "Grados",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_wishlist"
+        },
+        {
+          "url": "/tipoContenidos",
+          "name": "Tipos de contenido",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoOfertas",
+          "name": "Tipos de oferta",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoOdas",
+          "name": "Tipos de ODA's",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/personas",
+          "name": "Personas",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoProfesors",
+          "name": "Tipo de Profesores",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoCursos",
+          "name": "Tipo de cursos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoAlumnos",
+          "name": "Tipo de Alumnos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoPagos",
+          "name": "Tipo de Pagos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoCongresos",
+          "name": "Tipo de Congresos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/categoriaCongresos",
+          "name": "Categorías de Congresos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/estatuses",
+          "name": "Estatus",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/controlSuscripcions",
+          "name": "Control Suscripciones",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/tipoCalificacions",
+          "name": "Tipo de calificación",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        },
+        {
+          "url": "/calificacionOfertaCursos",
+          "name": "Calificacion Ofertas",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_checkout"
+        }
+      ]
+    },
+    {
+      "url": "",
+      "name": "Control Escolar",
+      "icon": "fa fa-graduation-cap",
+      "submenu": [
+        {
+          "url": "/profesors",
+          "name": "Profesores",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        },
+        {
+          "url": "/estudiantes",
+          "name": "Estudiantes",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        },
+        {
+          "url": "/congresos",
+          "name": "Congresos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        }
+      ]
+    },
+    {
+      "url": "/migracion",
+      "name": "Migración de contenido",
+      "icon": "fa fa-upload",
+      "i18n": "nav.app_ecommerce_shop"
+    },
+    {
+      "url": "",
+      "name": "Blog",
+      "icon": "fa fa-file",
+      "submenu": [
+        {
+          "url": "/autors",
+          "name": "Autores",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        },
+        {
+          "url": "/articulos",
+          "name": "Articulos",
+          "icon": "feather icon-circle",
+          "i18n": "nav.app_ecommerce_shop"
+        }
+      ]
+    }
+  ]
+}
