@@ -8,7 +8,7 @@
                 <a href="javascript:void(0);" class="brand-logo">
                     {{-- <img src="{{asset('img/logos/logo_v2.png')}}" alt="Girl in a jacket" width="30" height="42"> --}}
                     <h2 class="brand-text text-primary ml-1">Fisicampus</h2>
-                </a>
+                </a> 
 
                 <h4 class="card-title mb-1 text-center">Bienvenido a Fisiocampus!</h4>
                 <div class="card-title mb-1 text-center">
@@ -76,4 +76,4 @@
     </div>
 </div>
     
-@endsection
+@endsection 
