@@ -18,8 +18,7 @@
 
   <!-- BEGIN: Page CSS-->
   <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/core/menu/menu-types/vertical-menu.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/plugins/forms/form-validation.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/pages/app-user.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/css/plugins/forms/form-validation.css')}}">  
   <!-- END: Page CSS-->
 
   <!-- BEGIN: Custom CSS-->
