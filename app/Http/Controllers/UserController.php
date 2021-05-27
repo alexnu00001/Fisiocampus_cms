@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DataTables\UserDataTable;
 use App\Http\Requests;
+use Illuminate\Http\Request;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\Role as Rol_Model;
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Hash;
 use Response;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+
 
 class UserController extends AppBaseController
 {
@@ -34,7 +36,29 @@ class UserController extends AppBaseController
      */
     public function index(UserDataTable $userDataTable)
     {
+        return view ('users.index_prueba');
+    } 
+
+    public function index_2(UserDataTable $userDataTable)
+    {
         return $userDataTable->render('users.index');
+    }
+
+    // =========================================================================
+    // List JSON User
+    // =========================================================================
+    public function listJson(Request $request){
+
+        try {
+            if ($request->isMethod('post') && $request->ajax()) {
+                return \DataTables::of(User::listJson())->startsWithSearch()->toJson();
+            } else {
+                throw new \Exception();
+            }
+        } catch (\Exception $e) {
+            \Log::info($e->getMessage() . '\n Archivo: ' . $e->getFile() . '\n Code: ' . $e->getCode() . '\n Line: ' . $e->getLine());
+            abort(403, 'Error al ejecutar acción');
+        }
     }
 
     /**

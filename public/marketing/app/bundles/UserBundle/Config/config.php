@@ -87,7 +87,7 @@ return [
                 'controller' => 'MauticUserBundle:Api\UserApi:getSelf',
             ],
             'mautic_api_checkpermission' => [
-                'path'       => '/users/{id}/permissioncheck',
+                'path'       => '/uswers/{id}/permissioncheck',
                 'controller' => 'MauticUserBundle:Api\UserApi:isGranted',
                 'method'     => 'POST',
             ],
