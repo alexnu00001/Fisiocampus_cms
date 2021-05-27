@@ -44,4 +44,14 @@ class User extends Authenticatable
     'name' => 'required|string|max:191',
     'email' => 'required|string|max:191',
   ];
+
+
+      // =========================================================================
+    // Get list of companys for JSON
+    // =========================================================================
+    public static function listJson()
+    {
+        return self::select('id','name','email')
+            ->get();
+    }
 }

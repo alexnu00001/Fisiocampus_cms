@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,7 @@ Route::resource('permissions', 'PermissionController');
 
 
 Route::resource('users', 'UserController');
+Route::post('listJson/user', [UserController::class, 'listJson'])->name('user-list');
 
 
 Route::post('/updatePermissionRole', 'RoleController@updatePermissionRole')->name('updatePermissionRole');
