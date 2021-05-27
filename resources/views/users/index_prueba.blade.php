@@ -40,10 +40,10 @@
                         <table id="prueba" class=" table">
                             <thead class="thead-light">
                                 <tr>
-                                    <th>Role</th>
-                                    <th>Plan</th>
-                                    <th>Status</th>
-                                    <th>Actions</th>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
                                 </tr>
                             </thead>
                         </table>
@@ -117,7 +117,14 @@ $(document).ready(function() {
         "columns": [
 
                 { "data": "name","className": "text-justify", "orderable": true },
-                { "data": "name","className": "text-justify", "orderable": true },
+                { "data": "email","className": "text-justify", "orderable": true },
+                { "data": "id", "orderable": false, "className": "text-center", "render" : function(data, type, full, meta){
+                                //users/3/edit
+                                return '<a  class="btn btn-secondary waves-effect waves-light m-1" href="{{asset('/users')}}/'+data+'/edit"><i class="zmdi zmdi-edit"></i></a>';
+                 } },
+                 { "data": "id", "orderable": false, "className": "text-center", "render" : function(data, type, full, meta){
+                                return '<a class="btn btn-danger waves-effect waves-light m-1" href="javascript:eliminar{{$table}}('+data+');"><i class="fa fa-trash-o"></i></a>';
+                  } }
         ]
     });
 
