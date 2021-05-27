@@ -1,7 +1,7 @@
 @extends('layouts.vuexy')
 @section('content')
 <div class="card-datatable table-responsive pt-0">
-    <table class="user-list-table table">
+    <table id="example" class="user-list-table table">
         <thead class="thead-light">
             <tr>
                 <th></th>
@@ -18,6 +18,9 @@
 @endsection 
 @section('scripts')
     @parent
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
 <script>
 </script>
 @endsection
