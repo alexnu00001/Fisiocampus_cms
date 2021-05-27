@@ -24,3 +24,11 @@
   <!-- BEGIN: Custom CSS-->
   <link rel="stylesheet" type="text/css" href="{{asset('vuexy/assets/css/style.css')}}">
   <!-- END: Custom CSS-->
+
+
+  <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap4.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
+
+
+
+    
