@@ -7,14 +7,14 @@
   {{-- <div class="card-body">
     @include('flash::message')
   </div> --}}
-  <div class="row" id="table-head>
+  <div class="row" id="table-head">
       <div class="col-12">
           <div class="card">
               <div class="card-header border-bottom">
                   <h4 class="card-title">Listado de Ofertas</h4>
                   <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
                       <div class="form-group breadcrumb-right">            
-                          <button type="button" class="btn add-new btn-primary mt-50">Nuevo registro</button>
+                          <button type="button" onclick="window.location.href='{{route('ofertas.create')}}'"  class="btn add-new btn-primary mt-50">Nuevo registro</button>
                       </div>
                   </div>
               </div>
