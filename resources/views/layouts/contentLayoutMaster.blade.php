@@ -18,7 +18,7 @@ $configData = Helper::applClasses();
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title') - Fisio Campus Admin</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logos/fav.png">
 
     {{-- Include core + vendor Styles --}}
     @include('panels/styles')

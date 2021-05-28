@@ -2,13 +2,13 @@
     @include('layouts.datatables_css')
 @endsection
 
-{!! $dataTable->table(['width' => '100%', 'class' => 'table table-striped table-bordered']) !!}
+{!! $dataTable->table(['width' => '100%', 'class' => 'table']) !!}
 
 @push('scripts')
     @include('layouts.datatables_js')
     {!! $dataTable->scripts() !!}
     <script>
-          $(".table").find("thead").addClass('thead-dark');
+          // //$(".table").find("thead").addClass('thead-dark');
 
           (function ($, DataTable) {
 

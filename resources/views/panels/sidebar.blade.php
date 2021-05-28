@@ -8,8 +8,8 @@ $configData = Helper::applClasses();
     <ul class="nav navbar-nav flex-row">
       <li class="nav-item mr-auto">
         <a class="navbar-brand" href="/">
-          <img src="/images/logo/logo.png" alt="inicio" style="margin-top: -.5em; width: 1em" >
-          <h2 class="brand-text mb-0" style="color: #8F6946">FisioAdmin</h2>
+          <img src="img/logos/logo_short.png" alt="inicio" style="margin-top: -.5em; width: 2em" >
+          <h2 class="brand-text mb-0" style="color: #08346a">FisioAdmin</h2>
         </a>
       </li>
       <li class="nav-item nav-toggle">

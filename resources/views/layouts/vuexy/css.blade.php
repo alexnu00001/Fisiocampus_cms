@@ -30,5 +30,4 @@
   <link rel="stylesheet" type="text/css" href="{{asset('vuexy/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
 
 
-
-    
+ 
