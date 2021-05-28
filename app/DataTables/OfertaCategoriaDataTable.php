@@ -44,15 +44,15 @@ class OfertaCategoriaDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '120px', 'printable' => false])
             ->parameters([
-                'dom'       => 'Bfrtip',
+                'dom'       => '<"card-header border-bottom p-1"<"head-label"><"dt-action-buttons text-right"B>><"d-flex justify-content-between align-items-center mx-0 row"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6"f>>t<"d-flex justify-content-between mx-0 row"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
-                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
-                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
+                    //['extend' => 'create', 'className' => 'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'export', 'className' => 'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'print', 'className' => 'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'reset', 'className' => 'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'reload', 'className' => 'btn btn-outline-primary waves-effect',],
                 ],
             ]);
     }

@@ -44,16 +44,16 @@ class TipoAlumnoDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '120px', 'printable' => false,'title' => 'Acción'])
             ->parameters([
-                'dom'       => 'Bfrtip',
+                'dom'       => '<"card-header border-bottom p-1"<"head-label"><"dt-action-buttons text-right"B>><"d-flex justify-content-between align-items-center mx-0 row"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6"f>>t<"d-flex justify-content-between mx-0 row"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
-                    ['extend' => 'create', 'className' =>     'btn bg-gradient-primary waves-effect waves-light btn-sm no-corner',],
-                    ['extend' => 'excel', 'className' =>      'btn bg-gradient-success waves-effect waves-light btn-sm no-corner',],
-                    ['extend' => 'csv', 'className' =>        'btn bg-gradient-success waves-effect waves-light btn-sm no-corner',],
-                    ['extend' => 'pdfHtml5', 'className' =>   'btn bg-gradient-danger  waves-effect waves-light btn-sm no-corner',],
-                    ['extend' => 'print', 'className' =>      'btn bg-gradient-danger  waves-effect waves-light btn-sm no-corner',],
-                    ['extend' => 'reset', 'className' =>      'btn bg-gradient-warning waves-effect waves-light btn-sm no-corner',]
+                    //['extend' => 'create', 'className' =>     'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'excel', 'className' =>      'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'csv', 'className' =>        'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'pdfHtml5', 'className' =>   'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'print', 'className' =>      'btn btn-outline-primary waves-effect',],
+                    //['extend' => 'reset', 'className' =>      'btn btn-outline-primary waves-effect',]
                 ],
             ]);
     }

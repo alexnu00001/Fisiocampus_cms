@@ -48,12 +48,12 @@ class OfertaDataTable extends DataTable
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
-                    // ['extend' => 'create', 'className' =>     'btn bg-gradient-primary waves-effect waves-light btn-sm no-corner',],
-                    ['extend' => 'excel', 'className' =>      'btn buttons-csv buttons-html5 btn-outline-primary waves-effect',],
-                    ['extend' => 'csv', 'className' =>        'btn buttons-csv buttons-html5 btn-outline-primary waves-effect',],
-                    ['extend' => 'pdfHtml5', 'className' =>   'btn buttons-csv buttons-html5 btn-outline-primary waves-effect',],
-                    ['extend' => 'print', 'className' =>      'btn buttons-csv buttons-html5 btn-outline-primary waves-effect',],
-                    // ['extend' => 'reset', 'className' =>      'btn bg-gradient-warning waves-effect waves-light btn-sm no-corner',]
+                    // //['extend' => 'create', 'className' =>     'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'excel', 'className' =>      'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'csv', 'className' =>        'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'pdfHtml5', 'className' =>   'btn btn-outline-primary waves-effect',],
+                    ['extend' => 'print', 'className' =>      'btn btn-outline-primary waves-effect',],
+                    // //['extend' => 'reset', 'className' =>      'btn btn-outline-primary waves-effect',]
                 ],
             ]);
     }

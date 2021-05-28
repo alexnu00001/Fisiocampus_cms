@@ -8,7 +8,7 @@
     @include('layouts.datatables_js')
     {!! $dataTable->scripts() !!}
     <script>
-          // $(".table").find("thead").addClass('thead-dark');
+          // //$(".table").find("thead").addClass('thead-dark');
 
           (function ($, DataTable) {
 
