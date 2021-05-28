@@ -34,12 +34,12 @@ class UserController extends AppBaseController
      * @param UserDataTable $userDataTable
      * @return Response
      */
-    public function index(UserDataTable $userDataTable)
+    public function index_2(UserDataTable $userDataTable)
     {
         return view ('users.index_prueba');
     } 
 
-    public function index_2(UserDataTable $userDataTable)
+    public function index(UserDataTable $userDataTable)
     {
         return $userDataTable->render('users.index');
     }

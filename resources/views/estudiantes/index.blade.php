@@ -3,20 +3,57 @@
 @section('title', 'Estudiantes')
 
 @section('content')
-    <div class="row" id="table-head">
+<section id="complex-header-datatable">
+  {{-- <div class="card-body">
+    @include('flash::message')
+  </div> --}}
+  <div class="row" id="table-head">
       <div class="col-12">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body">
+          <div class="card">
+              <div class="card-header border-bottom">
+                  <h4 class="card-title">Listado de Estudiantes</h4>
+                  <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                      <div class="form-group breadcrumb-right">            
+                          <button type="button" onclick="window.location.href='{{route('estudiantes.create')}}'"  class="btn add-new btn-primary mt-50">Nuevo registro</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-datatable">                
+                @section('css')
+                  @include('layouts.datatables_css')
+                @endsection
 
-              @include('flash::message')
-            </div>
-            <div class="table-responsive">
-                @include('estudiantes.table')
-            </div>
+                {!! $dataTable->table(['width' => '100%', 'class' => 'table']) !!}
+
+                @push('scripts')
+                  @include('layouts.datatables_js')
+                  {!! $dataTable->scripts() !!}
+                    <script>
+                        // //$(".table").find("thead").addClass('thead-dark');
+
+                        (function ($, DataTable) {
+
+                          // Datatable global configuration
+                          $.extend(true, DataTable.defaults, {
+                            "language": {
+                              "url": "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
+                            }
+                          });
+
+                        })(jQuery, jQuery.fn.dataTable);
+                    </script>
+                @endpush
+              </div>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
+</section>
 @endsection
+
+
+
+
+
+
+
 

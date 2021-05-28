@@ -26,15 +26,15 @@ class LogroController extends AppBaseController
     }
 
     /**
-     * Display a listing of the Logro.
+     * Display a listing of the Logro. 
      *
      * @param LogroDataTable $logroDataTable
      * @return Response
      */
+
     public function index(LogroDataTable $logroDataTable)
     {
-        $logros = Logro::all();
-        return view('logros.index', compact('logros'));
+        return $logroDataTable->render('logros.index');
     }
 
     /**
